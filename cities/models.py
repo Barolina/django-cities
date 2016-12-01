@@ -94,6 +94,9 @@ class City(Place):
     kind = models.CharField(max_length=10) # http://www.geonames.org/export/codes.html
     timezone = models.CharField(max_length=40) 
 
+    def __str__(self):
+        return "{}, {}, {}".format(self.name, self.country.name, self.region.name)
+
     class Meta:
         verbose_name_plural = "cities"
 
