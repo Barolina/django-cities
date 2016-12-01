@@ -95,7 +95,7 @@ class City(Place):
     timezone = models.CharField(max_length=40) 
 
     def __str__(self):
-        return "{}, {}, {}".format(self.name, getattr(self.country, 'name', ''), getattr(self.region, 'name', '')
+        return "{}, {}, {}".format(self.name, getattr(self.country, 'name', ''), getattr(self.region, 'name', ''))
 
     class Meta:
         verbose_name_plural = "cities"
